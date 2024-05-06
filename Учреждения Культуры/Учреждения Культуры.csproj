@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CCAD7A9-7134-4C18-A7F7-DBEA91AAA30A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Учреждения_Культуры</RootNamespace>
+    <AssemblyName>Учреждения Культуры</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db.cs" />
+    <Compile Include="Авторизация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Авторизация.Designer.cs">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бюджет.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бюджет.Designer.cs">
+      <DependentUpon>Бюджет.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Восстановление.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Восстановление.Designer.cs">
+      <DependentUpon>Восстановление.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Запрос.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Запрос.Designer.cs">
+      <DependentUpon>Запрос.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Отчет.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Отчет.Designer.cs">
+      <DependentUpon>Отчет.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ПричинаОтказа.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ПричинаОтказа.Designer.cs">
+      <DependentUpon>ПричинаОтказа.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ПроверкаСостоянияЗапроса.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ПроверкаСостоянияЗапроса.Designer.cs">
+      <DependentUpon>ПроверкаСостоянияЗапроса.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Распределение.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Распределение.Designer.cs">
+      <DependentUpon>Распределение.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Регистрация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Регистрация.Designer.cs">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Список распределения.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список распределения.Designer.cs">
+      <DependentUpon>Список распределения.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Авторизация.resx">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бюджет.resx">
+      <DependentUpon>Бюджет.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Восстановление.resx">
+      <DependentUpon>Восстановление.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Запрос.resx">
+      <DependentUpon>Запрос.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Отчет.resx">
+      <DependentUpon>Отчет.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ПричинаОтказа.resx">
+      <DependentUpon>ПричинаОтказа.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ПроверкаСостоянияЗапроса.resx">
+      <DependentUpon>ПроверкаСостоянияЗапроса.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Распределение.resx">
+      <DependentUpon>Распределение.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Регистрация.resx">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Список распределения.resx">
+      <DependentUpon>Список распределения.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
